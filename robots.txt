@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://maplearmy.jp/sitemap.xml
+Disallow: /
