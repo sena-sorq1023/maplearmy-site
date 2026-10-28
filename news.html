@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
 <title>NEWS | MAPLE ARMY</title>
 <meta name="description" content="MAPLE ARMYからのお知らせ。メンバー加入・大会情報・募集など。">
 <link rel="canonical" href="https://maplearmy.jp/news.html">
@@ -41,76 +40,167 @@ a:focus-visible,button:focus-visible{outline:2px solid #EF4A44;outline-offset:3p
 </style>
 </head>
 <body>
-<noscript><p style="padding:40px;color:#F5F3F0;font-family:sans-serif">このサイトの表示にはJavaScriptが必要です。</p></noscript>
-<main id="gate" hidden style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;background:#0B0B0C;color:#F5F3F0;font-family:'Noto Sans JP',system-ui,sans-serif">
-<form id="gate-form" style="width:100%;max-width:380px;display:flex;flex-direction:column;gap:18px;background:#151517;border-top:3px solid #C92D2C;padding:36px 32px">
-<img src="assets/logo-horizontal.png" alt="MAPLE ARMY" style="height:26px;width:auto;align-self:flex-start">
-<p style="margin:0;font-size:14px;line-height:1.8;color:#C9C5BE">公開準備中のため、閲覧にはログインが必要です。</p>
-<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:700;color:#A8A49C">ユーザー名
-<input id="gate-user" name="username" autocomplete="username" required style="min-height:48px;padding:0 14px;font-size:16px;color:#F5F3F0;background:#0B0B0C;border:1px solid #3A3A3F"></label>
-<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:700;color:#A8A49C">パスワード
-<input id="gate-pass" name="password" type="password" autocomplete="current-password" required style="min-height:48px;padding:0 14px;font-size:16px;color:#F5F3F0;background:#0B0B0C;border:1px solid #3A3A3F"></label>
-<p id="gate-err" role="alert" hidden style="margin:0;font-size:14px;color:#EF4A44">ユーザー名またはパスワードが違います。</p>
-<button type="submit" style="min-height:52px;background:#C92D2C;color:#fff;border:0;font-size:15px;font-weight:900;letter-spacing:.08em;cursor:pointer">ログイン</button>
-</form>
-</main>
+<div style="background: #0B0B0C; color: #F5F3F0; font-family: 'Noto Sans JP', system-ui, sans-serif; min-height: 100vh; overflow: hidden">
+
+<header style="position: relative; z-index: 2; border-bottom: 1px solid #2A2A2E; background: #0B0B0C">
+<nav aria-label="メインメニュー" style="max-width: 1320px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="index.html" aria-label="MAPLE ARMY トップ" style="display: flex; align-items: center; min-height: 44px">
+<img src="assets/logo-horizontal.png" alt="MAPLE ARMY" style="height: 30px; width: auto; display: block">
+</a>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 28px; font-family: Archivo, sans-serif; font-size: 14px; font-weight: 800; font-stretch: 112%; letter-spacing: 0.06em">
+<a href="news.html" aria-current="page" style="text-decoration: none; padding: 10px 0; border-bottom: 2px solid #C92D2C; color: #EF4A44">NEWS</a>
+<a href="team.html" style="text-decoration: none; padding: 12px 0">TEAM</a>
+<a href="events.html" style="text-decoration: none; padding: 12px 0">EVENTS</a>
+<a href="partners.html" style="text-decoration: none; padding: 12px 0">PARTNERS</a>
+<a href="organization.html" style="text-decoration: none; padding: 12px 0">ORGANIZATION</a>
+<a href="#contact" style="text-decoration: none; padding: 12px 22px; background: #C92D2C; color: #FFFFFF">CONTACT</a>
+</div>
+</nav>
+</header>
+
+<section style="position: relative; overflow: hidden; border-bottom: 1px solid #2A2A2E">
+<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none">
+<div class="ma-anim" style="position: absolute; right: -10%; top: -40%; width: 60%; height: 180%; border-radius: 50%; background: #C92D2C; filter: blur(140px); opacity: 0.4; animation: ma-glow 16s ease-in-out infinite"></div>
+<img class="ma-anim" src="assets/leaf.webp" alt="" style="position: absolute; right: 4%; top: 50%; width: min(380px, 40%); opacity: 0.16; animation: ma-sway 18s ease-in-out infinite">
+</div>
+<div style="position: relative; max-width: 1320px; margin: 0 auto; padding: 96px 32px 80px; display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-family: Archivo, sans-serif; font-size: 13px; font-weight: 800; font-stretch: 112%; letter-spacing: 0.22em; color: #EF4A44">MAPLE ARMY / NEWS</p>
+<h1 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 900; font-style: italic; font-stretch: 125%; font-size: clamp(64px, 10vw, 136px); line-height: 0.9">NEWS</h1>
+<p style="margin: 0; font-size: 16px; color: #C9C5BE">メンバー加入・大会情報・募集など、MAPLE ARMYからのお知らせ。</p>
+</div>
+</section>
+
+<section id="pickup" style="max-width: 1320px; margin: 0 auto; padding: 80px 32px 0">
+<span style="display: block; margin-bottom: 20px; font-family: Archivo, sans-serif; font-size: 13px; font-weight: 800; font-stretch: 112%; letter-spacing: 0.22em; color: #EF4A44">PICK UP</span>
+<article id="site-open" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); background: #151517">
+<div style="background: #0B0B0C; display: flex; align-items: center">
+<img src="assets/news-site-open.jpg" alt="MAPLE ARMY" style="display: block; width: 100%; aspect-ratio: 1200 / 630; object-fit: cover">
+</div>
+<div style="padding: 36px 40px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; padding: 4px 10px; border: 1px solid #EF4A44; color: #EF4A44">INFO</span>
+<span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 15px; color: #8B877F">2026.11.01</span>
+</div>
+<h2 style="margin: 0; font-size: 26px; font-weight: 900; line-height: 1.5">MAPLE ARMY 公式サイトオープンのお知らせ</h2>
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px; line-height: 1.9; color: #D8D4CD">
+<p style="margin: 0">いつもMAPLE ARMYを応援いただき、誠にありがとうございます。</p>
+<p style="margin: 0">このたび、MAPLE ARMY公式サイトを開設いたしました。</p>
+<p style="margin: 0">公式サイトでは、所属メンバーの紹介や大会結果、主催大会「CRUX」・競技スクリム「PMSB」の情報、最新のお知らせなどをお届けしてまいります。</p>
+<p style="margin: 0">今後ともMAPLE ARMYへの変わらぬご声援を、よろしくお願いいたします。</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px">
+<a href="team.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #C92D2C; color: #FFFFFF; font-weight: 900; letter-spacing: 0.08em; text-decoration: none">メンバーを見る</a>
+<a href="index.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; border: 2px solid #F5F3F0; font-weight: 900; letter-spacing: 0.04em; text-decoration: none">トップページへ</a>
+</div>
+</div>
+</article>
+<article style="margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); background: #151517">
+<img src="assets/recruit-pubgm.jpg" alt="WE WANT YOU — PUBG MOBILE Div. PLAYER / COACH 募集" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover">
+<div style="padding: 36px 40px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; padding: 4px 10px; background: #C92D2C; color: #FFFFFF">RECRUIT</span>
+<span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 15px; color: #8B877F">2026.10.23</span>
+</div>
+<h2 style="margin: 0; font-size: 26px; font-weight: 900; line-height: 1.5">PUBG MOBILE部門 選手・コーチ募集のお知らせ</h2>
+<dl style="margin: 0; display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px 16px; font-size: 15px; line-height: 1.7">
+<dt style="color: #A8A49C; font-weight: 700">募集部門</dt><dd style="margin: 0">PUBG MOBILE Div.</dd>
+<dt style="color: #A8A49C; font-weight: 700">募集職種</dt><dd style="margin: 0">PLAYER / COACH</dd>
+<dt style="color: #A8A49C; font-weight: 700">目標</dt><dd style="margin: 0">2027年の国内公式大会</dd>
+<dt style="color: #A8A49C; font-weight: 700">応募条件</dt><dd style="margin: 0">応募フォーム内に記載しています</dd>
+</dl>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px">
+<a href="https://forms.gle/f1RNaLtNsicKXLKQ9" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #C92D2C; color: #FFFFFF; font-weight: 900; letter-spacing: 0.08em; text-decoration: none">応募フォームへ</a>
+<a href="https://x.com/_MAPLE_ARMY/status/2113578683407474774" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border: 2px solid #F5F3F0; font-weight: 900; letter-spacing: 0.04em; text-decoration: none"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 4 L20 20 M20 4 L4 20"></path></svg>告知ポストを見る</a>
+</div>
+</div>
+</article>
+<article style="margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); background: #151517">
+<img src="assets/recruit-valorant.jpg" alt="WE WANT YOU — VALORANT DIV. 募集" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover">
+<div style="padding: 36px 40px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; padding: 4px 10px; background: #C92D2C; color: #FFFFFF">RECRUIT</span>
+<span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 15px; color: #8B877F">2026.10.22</span>
+</div>
+<h2 style="margin: 0; font-size: 26px; font-weight: 900; line-height: 1.5">VALORANT部門 チーム募集のお知らせ</h2>
+<dl style="margin: 0; display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px 16px; font-size: 15px; line-height: 1.7">
+<dt style="color: #A8A49C; font-weight: 700">募集部門</dt><dd style="margin: 0">VALORANT Div.</dd>
+<dt style="color: #A8A49C; font-weight: 700">募集形態</dt><dd style="margin: 0">チーム単位での応募のみ受け付けています</dd>
+<dt style="color: #A8A49C; font-weight: 700">応募条件</dt><dd style="margin: 0">応募フォーム内に記載しています</dd>
+</dl>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px">
+<a href="https://forms.gle/hocYv9NEepkJQLMH8" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #C92D2C; color: #FFFFFF; font-weight: 900; letter-spacing: 0.08em; text-decoration: none">応募フォームへ</a>
+<a href="https://x.com/_MAPLE_ARMY/status/2113208754686906865" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border: 2px solid #F5F3F0; font-weight: 900; letter-spacing: 0.04em; text-decoration: none"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 4 L20 20 M20 4 L4 20"></path></svg>告知ポストを見る</a>
+</div>
+</div>
+</article>
+</section>
+
+<section id="news-list" style="max-width: 1320px; margin: 0 auto; padding: 80px 32px 0">
+<div role="group" aria-label="カテゴリで絞り込み" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px">
+<button type="button" class="ui-chip" data-filter="ALL" aria-pressed="true">ALL</button>
+<button type="button" class="ui-chip" data-filter="INFO" aria-pressed="false">INFO</button>
+<button type="button" class="ui-chip" data-filter="RECRUIT" aria-pressed="false">RECRUIT</button>
+<button type="button" class="ui-chip" data-filter="ROSTER" aria-pressed="false">ROSTER</button>
+<button type="button" class="ui-chip" data-filter="EVENT" aria-pressed="false">EVENT</button>
+<button type="button" class="ui-chip" data-filter="RESULT" aria-pressed="false">RESULT</button>
+</div>
+<div style="display: flex; flex-direction: column; border-top: 1px solid #2A2A2E">
+<a href="#pickup" data-cat="INFO" style="display: flex; flex-wrap: wrap; gap: 8px 32px; align-items: baseline; padding: 26px 0; border-bottom: 1px solid #2A2A2E; text-decoration: none">
+<span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 18px; color: #8B877F; min-width: 120px">2026.11.01</span>
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; padding: 4px 10px; min-width: 64px; text-align: center; background: transparent; color: #EF4A44; border: 1px solid #EF4A44">INFO</span>
+<span style="font-size: 17px; font-weight: 500; flex: 1 1 320px">MAPLE ARMY 公式サイトオープンのお知らせ</span>
+</a>
+<a href="#pickup" data-cat="RECRUIT" style="display: flex; flex-wrap: wrap; gap: 8px 32px; align-items: baseline; padding: 26px 0; border-bottom: 1px solid #2A2A2E; text-decoration: none">
+<span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 18px; color: #8B877F; min-width: 120px">2026.10.23</span>
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; padding: 4px 10px; min-width: 64px; text-align: center; background: #C92D2C; color: #FFFFFF; border: 1px solid #C92D2C">RECRUIT</span>
+<span style="font-size: 17px; font-weight: 500; flex: 1 1 320px">PUBG MOBILE部門 選手・コーチ募集のお知らせ</span>
+</a>
+<a href="#pickup" data-cat="RECRUIT" style="display: flex; flex-wrap: wrap; gap: 8px 32px; align-items: baseline; padding: 26px 0; border-bottom: 1px solid #2A2A2E; text-decoration: none">
+<span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 18px; color: #8B877F; min-width: 120px">2026.10.22</span>
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; padding: 4px 10px; min-width: 64px; text-align: center; background: #C92D2C; color: #FFFFFF; border: 1px solid #C92D2C">RECRUIT</span>
+<span style="font-size: 17px; font-weight: 500; flex: 1 1 320px">VALORANT部門 チーム募集のお知らせ</span>
+</a>
+<p data-empty hidden style="margin: 0; padding: 40px 0; color: #A8A49C; border-bottom: 1px solid #2A2A2E">このカテゴリのお知らせはまだありません。</p>
+</div>
+</section>
+
+<section id="contact" style="margin-top: 128px; background: #C92D2C; color: #FFFFFF">
+<div style="max-width: 1320px; margin: 0 auto; padding: 80px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 40px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 900; font-style: italic; font-stretch: 125%; font-size: clamp(52px, 7vw, 88px); line-height: 0.95">CONTACT</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.8; font-weight: 500">スポンサー・大会・取材・コラボレーションのご相談はこちらから。</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-start">
+<a href="mailto:contact@maplearmy.jp" style="font-family: Archivo, sans-serif; font-weight: 900; font-stretch: 112%; font-size: clamp(24px, 3.2vw, 40px); color: #FFFFFF">contact@maplearmy.jp</a>
+<a href="mailto:contact@maplearmy.jp" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; background: #0B0B0C; color: #FFFFFF; font-weight: 900; letter-spacing: 0.08em; text-decoration: none">メールで問い合わせる</a>
+</div>
+</div>
+</section>
+
+<footer style="max-width: 1320px; margin: 0 auto; padding: 48px 32px 56px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+<img src="assets/logo-horizontal.png" alt="MAPLE ARMY" style="height: 24px; width: auto; display: block">
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13px">
+<a href="index.html" style="color: #C9C5BE; padding: 12px 0">TOP</a>
+<a href="team.html" style="color: #C9C5BE; padding: 12px 0">TEAM</a>
+<a href="events.html" style="color: #C9C5BE; padding: 12px 0">EVENTS</a>
+<a href="partners.html" style="color: #C9C5BE; padding: 12px 0">PARTNERS</a>
+<a href="organization.html" style="color: #C9C5BE; padding: 12px 0">運営団体</a>
+<a href="https://x.com/_MAPLE_ARMY" target="_blank" rel="noopener" style="color: #C9C5BE; padding: 12px 0">X</a>
+<a href="https://www.youtube.com/@MAPLEARMY" target="_blank" rel="noopener" style="color: #C9C5BE; padding: 12px 0">YouTube</a>
+</div>
+<span style="flex-basis: 100%; font-size: 12px; color: #8B877F">© 2025–2026 SENA STUDIO. MAPLE ARMY is a brand of SENA STUDIO.</span>
+</footer>
+
+</div>
 <script>
 (function(){
-var SALT='0ArHVo8weqH5U5FzBj7ZCA==',IV='EI+pJ7r3z3MFXt30vKNzjA==',DATA='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',ITERS=20000,MARK='MAPLEARMY-GATE:',K='ma_gate_key2';
-var KC=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
-function sha256(msg){
-  var l=msg.length,n=((l+9+63)>>6)<<6,m=new Uint8Array(n);m.set(msg);m[l]=0x80;
-  var dv=new DataView(m.buffer),bits=l*8;dv.setUint32(n-4,bits>>>0);dv.setUint32(n-8,Math.floor(bits/4294967296));
-  var H=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19],w=new Array(64);
-  for(var o=0;o<n;o+=64){
-    for(var i=0;i<16;i++)w[i]=dv.getUint32(o+i*4);
-    for(i=16;i<64;i++){var x=w[i-15],y=w[i-2];
-      w[i]=(w[i-16]+(((x>>>7)|(x<<25))^((x>>>18)|(x<<14))^(x>>>3))+w[i-7]+(((y>>>17)|(y<<15))^((y>>>19)|(y<<13))^(y>>>10)))|0;}
-    var a=H[0],b=H[1],c=H[2],d=H[3],e=H[4],f=H[5],g=H[6],h=H[7];
-    for(i=0;i<64;i++){
-      var t1=(h+(((e>>>6)|(e<<26))^((e>>>11)|(e<<21))^((e>>>25)|(e<<7)))+((e&f)^(~e&g))+KC[i]+w[i])|0;
-      var t2=((((a>>>2)|(a<<30))^((a>>>13)|(a<<19))^((a>>>22)|(a<<10)))+((a&b)^(a&c)^(b&c)))|0;
-      h=g;g=f;f=e;e=(d+t1)|0;d=c;c=b;b=a;a=(t1+t2)|0;}
-    H[0]=(H[0]+a)|0;H[1]=(H[1]+b)|0;H[2]=(H[2]+c)|0;H[3]=(H[3]+d)|0;H[4]=(H[4]+e)|0;H[5]=(H[5]+f)|0;H[6]=(H[6]+g)|0;H[7]=(H[7]+h)|0;
-  }
-  var out=new Uint8Array(32),od=new DataView(out.buffer);for(i=0;i<8;i++)od.setUint32(i*4,H[i]>>>0);return out;
-}
-function b64(s){var r=atob(s),u=new Uint8Array(r.length);for(var i=0;i<r.length;i++)u[i]=r.charCodeAt(i);return u;}
-function tob64(u){var s='';for(var i=0;i<u.length;i++)s+=String.fromCharCode(u[i]);return btoa(s);}
-function cat(a,b){var r=new Uint8Array(a.length+b.length);r.set(a);r.set(b,a.length);return r;}
-function utf8(s){return unescape(encodeURIComponent(s)).split('').map(function(c){return c.charCodeAt(0);});}
-function derive(pass){
-  var salt=b64(SALT),k=sha256(cat(salt,new Uint8Array(utf8(pass))));
-  for(var i=0;i<ITERS;i++)k=sha256(cat(k,salt));
-  return k;
-}
-function decrypt(key){
-  var ct=b64(DATA),iv=b64(IV),pt=new Uint8Array(ct.length),blk=new Uint8Array(key.length+iv.length+4);
-  blk.set(key);blk.set(iv,key.length);var cdv=new DataView(blk.buffer);
-  for(var i=0,j=0;j<ct.length;i++){
-    cdv.setUint32(key.length+iv.length,i);var ks=sha256(blk);
-    for(var q=0;q<32&&j<ct.length;q++,j++)pt[j]=ct[j]^ks[q];
-  }
-  var text=decodeURIComponent(escape(Array.prototype.map.call(pt,function(c){return String.fromCharCode(c);}).join('')));
-  if(text.indexOf(MARK)!==0)throw new Error('bad');
-  return text.slice(MARK.length);
-}
-function reveal(html){
-  document.body.innerHTML=html;
-  var olds=document.body.querySelectorAll('script');
-  for(var i=0;i<olds.length;i++){var s=document.createElement('script');s.textContent=olds[i].textContent;olds[i].parentNode.replaceChild(s,olds[i]);}
-  if(location.hash){var t=document.getElementById(location.hash.slice(1));if(t)t.scrollIntoView();}
-}
-var stored=null;try{stored=localStorage.getItem(K);}catch(e){}
-if(stored){try{reveal(decrypt(b64(stored)));return;}catch(e){try{localStorage.removeItem(K);}catch(e2){}}}
-var gate=document.getElementById('gate');gate.hidden=false;
-document.getElementById('gate-form').addEventListener('submit',function(ev){
-  ev.preventDefault();
-  var u=document.getElementById('gate-user').value.trim(),p=document.getElementById('gate-pass').value.trim(),err=document.getElementById('gate-err');
-  err.hidden=true;
-  try{var key=derive(u+':'+p),html=decrypt(key);try{localStorage.setItem(K,tob64(key));}catch(e){}reveal(html);}
-  catch(e){err.hidden=false;}
-});
+  var chips=document.querySelectorAll('[data-filter]'),items=document.querySelectorAll('[data-cat]'),empty=document.querySelector('[data-empty]');
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    var f=c.dataset.filter,n=0;
+    chips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false');});
+    items.forEach(function(it){var on=f==='ALL'||it.dataset.cat===f;it.hidden=!on;if(on)n++;});
+    empty.hidden=n>0;
+  });});
 })();
 </script>
 </body>
