@@ -136,8 +136,14 @@ a:focus-visible,button:focus-visible{outline:2px solid #EF4A44;outline-offset:3p
     }
     var data={handle:v('handle'),age:v('age'),discord:v('discord'),email:v('email'),xacc:v('xacc'),position:vals('position'),openrole:v('openrole'),time:vals('time'),hours:v('hours'),appeal:v('appeal'),skills:v('skills'),tools:v('tools'),portfolio:v('portfolio'),game:v('game'),source:v('source'),note:v('note'),agree:form.elements.agree.checked,website:v('website'),elapsed:Date.now()-opened};
     err.hidden=true;btn.disabled=true;btn.textContent='送信中…';
-    fetch('https://sena-apply.s-kato-330.workers.dev/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
-      .then(function(r){return r.json().catch(function(){return {ok:false};}).then(function(j){if(!r.ok||!j.ok)throw new Error(r.status===429?'busy':'fail');});})
+    /* これまでの受付（通知用）と、SENA STUDIO BASE（採用管理）の両方に送る。どちらかに届けば受付完了 */
+    function send(url){
+      return fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+        .then(function(r){return r.json().catch(function(){return {ok:false};}).then(function(j){return (r.ok&&j.ok)?'ok':(r.status===429?'busy':'fail');});})
+        .catch(function(){return 'fail';});
+    }
+    Promise.all([send('https://sena-apply.s-kato-330.workers.dev/'),send('https://admin.senastudio.jp/api/public/apply')])
+      .then(function(res){if(res.indexOf('ok')<0)throw new Error(res.indexOf('busy')>=0?'busy':'fail');})
       .then(function(){form.hidden=true;done.hidden=false;window.scrollTo(0,0);done.focus();})
       .catch(function(x){err.textContent=x.message==='busy'?'短時間に何度も送信されたため、受け付けを止めています。しばらくしてからもう一度お試しください。':'送信できませんでした。通信環境を確認して、もう一度お試しください。うまくいかない場合は contact@senastudio.jp までご連絡ください。';err.hidden=false;btn.disabled=false;btn.textContent='この内容で応募する';});
   });
